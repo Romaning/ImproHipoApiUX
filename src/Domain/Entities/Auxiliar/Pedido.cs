@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Domain.Entities.Auxiliar;
+
+public partial class Pedido
+{
+    public int PedidoId { get; set; }
+
+    public int? Codigo { get; set; }
+
+    public int Tipo { get; set; }
+
+    public string? NombreCompleto { get; set; }
+
+    public string? Telefono { get; set; }
+
+    public string? DireccionEntrega { get; set; }
+
+    public DateTime? FechaEntrega { get; set; }
+
+    public DateTime? FechaModificacion { get; set; }
+
+    public int Plazo { get; set; }
+
+    public DateTime Validez { get; set; }
+
+    public int UsuarioId { get; set; }
+
+    public decimal TipoCambio { get; set; }
+
+    public int Moneda { get; set; }
+
+    public int PersonaContacto { get; set; }
+
+    public int PersonaResponsable { get; set; }
+
+    public int PersonaRecomendador { get; set; }
+
+    public int Estado { get; set; }
+
+    public int Util { get; set; }
+
+    public decimal TotalMoneda1 { get; set; }
+
+    public decimal TotalMoneda2 { get; set; }
+
+    public decimal DescuentoValor { get; set; }
+
+    public int DescuentoPorcentaje { get; set; }
+
+    public decimal PrecioOferta { get; set; }
+
+    public decimal DescuentoFraccion { get; set; }
+
+    public int ClientId { get; set; }
+
+    public DateTime FechaCreacion { get; set; }
+
+    public string? Observaciones { get; set; }
+
+    public virtual ICollection<PedidoItem> PedidoItems { get; set; } = new List<PedidoItem>();
+}

@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImproHipoApiUX", "src\Impro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06B47350-5A73-40A8-A2E1-1242EA4EFA50}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4F91580B-9F53-4A54-9BB5-1734A046A944}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Core", "2. Core", "{4F91580B-9F53-4A54-9BB5-1734A046A944}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9C6FD6FC-317B-40E4-9DA0-3491FC520196}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Presentation", "3. Presentation", "{9C6FD6FC-317B-40E4-9DA0-3491FC520196}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{536CDA82-ED97-499B-8ACD-8A91EAEC7E50}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Infrastructure", "1. Infrastructure", "{536CDA82-ED97-499B-8ACD-8A91EAEC7E50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{0FACD7A5-670A-4051-BB04-8FD13DCC698A}"
 EndProject
@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{913BBB52-19B4-4E3F-9B52-06701E6EF833}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{F2A77B89-8673-450B-90FD-4A53340DFEC7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Persistence", "0. Persistence", "{F2A77B89-8673-450B-90FD-4A53340DFEC7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "src\Persistence\Persistence.csproj", "{0C56A877-AFA0-4528-82CD-B335AA839753}"
 EndProject

@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Domain.Entities.Improcons;
+
+public partial class TipoConceptoCosto
+{
+    public int TipoConceptoCostoId { get; set; }
+
+    public string? Descricpion { get; set; }
+
+    public virtual ICollection<ConceptoCosto> ConceptoCostos { get; set; } = new List<ConceptoCosto>();
+}
