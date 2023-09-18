@@ -53,6 +53,7 @@ namespace Infrastructure.Gateways
                 .Include(x => x.Category)
                 .Include(x => x.ArchivosProductos)
                 .Include(x => x.TypeProd)
+                    .ThenInclude(y => y.ClassProd)
                 .Include(x => x.DefaultValues)
                     .ThenInclude(defaultValue => defaultValue.DefaultAttrib)
                         .ThenInclude(defaultAttrib => defaultAttrib.DefaultDomainNavigation);
@@ -117,6 +118,7 @@ namespace Infrastructure.Gateways
                 .Include(x => x.Category)
                 .Include(x => x.ArchivosProductos)
                 .Include(x => x.TypeProd)
+                    .ThenInclude(y => y.ClassProd)
                 .Include(x => x.DefaultValues)
                     .ThenInclude(defaultValue => defaultValue.DefaultAttrib)
                         .ThenInclude(defaultAttrib => defaultAttrib.DefaultDomainNavigation)
@@ -140,6 +142,7 @@ namespace Infrastructure.Gateways
                 .Include(x => x.Category)
                 .Include(x => x.ArchivosProductos)
                 .Include(x => x.TypeProd)
+                    .ThenInclude(y => y.ClassProd)
                 .Include(x => x.DefaultValues)
                     .ThenInclude(defaultValue => defaultValue.DefaultAttrib)
                         .ThenInclude(defaultAttrib => defaultAttrib.DefaultDomainNavigation)

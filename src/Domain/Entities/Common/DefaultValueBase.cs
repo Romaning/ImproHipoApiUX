@@ -20,10 +20,10 @@ public  class DefaultValueBase
     public int? Util { get; set; }
 
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual DefaultAttribBase DefaultAttribBase { get; set; } = null!;
 
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ProdBase ProdBase { get; set; } = null!;
 }

@@ -133,30 +133,30 @@ namespace Application.Models.Responses.ListaRapidaWebPageMain
         public bool MasVendido { get; set; } = false;
 
         //ADICIONADO
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<AtributoViewModel> Atributos { get; set; } = new List<AtributoViewModel>();
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<ColoresProdViewModel> Colores { get; set; } = new List<ColoresProdViewModel>();
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<ArchivosImagenViewModel> Imagenes { get; set; } = new List<ArchivosImagenViewModel>();
         //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         //INFORMATIVO
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<PriceViewModel> ProdsEspecYPrecios { get; set; } = new List<PriceViewModel>();
 
         ////INFORMATIVO
-        [JsonIgnore]
-        public virtual ICollection<MarkViewModel> Marcas { get; set; } = new List<MarkViewModel>();
-
-        ////INFORMATIVO
-        [JsonIgnore]
-        public virtual ICollection<CategoryViewModel> Modelos { get; set; } = new List<CategoryViewModel>();
+        //[JsonIgnore]
+        //public virtual ICollection<MarkViewModel> Marcas { get; set; } = new List<MarkViewModel>();
 
         ////INFORMATIVO
         //[JsonIgnore]
-        public virtual ICollection<IndustryViewModel?> Industrias { get; set; } = null!;
+        //public virtual ICollection<CategoryViewModel> Modelos { get; set; } = new List<CategoryViewModel>();
+
+        ////INFORMATIVO
+        //[JsonIgnore]
+        //public virtual ICollection<IndustryViewModel?> Industrias { get; set; } = null!;
 
         //ADICIONADO
         //[JsonIgnore]

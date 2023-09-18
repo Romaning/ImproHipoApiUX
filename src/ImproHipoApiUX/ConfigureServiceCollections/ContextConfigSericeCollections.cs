@@ -23,7 +23,7 @@ namespace ImproHipoApiUX.ConfigureServiceCollections
             );
 
             services.AddDbContext<ApplicationDbAuxContext>(optionsBuilder => optionsBuilder.UseSqlServer(configuration.GetConnectionString("ConnSqlServerAuxiliar"), 
-                optionsBuilder => optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery),
+                optionsBuilder => optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
                 
                 )
             .ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.MultipleCollectionIncludeWarning)));

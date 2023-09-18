@@ -23,6 +23,6 @@ public  class DefaultDomainBase
 
     public int Grafico { get; set; }
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ICollection<DefaultAttribBase> DefaultAttribBases { get; set; } = new List<DefaultAttribBase>();
 }

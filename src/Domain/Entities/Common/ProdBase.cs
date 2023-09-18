@@ -107,27 +107,27 @@ namespace Domain.Entities.Common
         public virtual ICollection<RegistroCambioProducto> RegistroCambioProductos { get; set; } = new List<RegistroCambioProducto>();
         */
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual MarkBase? MarkBase { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual IndustryBase? IndustryBase { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual TypeProdBase TypeProdBase { get; set; } = null!;
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual CategoryBase? CategoryBase { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<DefaultValueBase> DefaultValueBases { get; set; } = new List<DefaultValueBase>();
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<ArchivosProductoBase> ArchivosProductoBases { get; set; } = new List<ArchivosProductoBase>();
 
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Application.DTOs;
 
@@ -22,9 +23,9 @@ public partial class TypeProd : TypeProdBase
     //public int? Valor { get; set; }
 
     //public int? Util { get; set; }
-
+    [JsonIgnore]
     public virtual ClassProd ClassProd { get; set; } = null!;
-
+    [JsonIgnore]
     public virtual ICollection<Prod> Prods { get; set; } = new List<Prod>();
 
     //ADICIONADO PARA LA BASE DE DATOS

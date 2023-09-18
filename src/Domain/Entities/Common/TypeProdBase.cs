@@ -22,11 +22,11 @@ namespace Domain.Entities.Common
         public int? Util { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ClassProdBase ClassProdBase { get; set; } = null!;
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<ProdBase> ProdBases { get; set; } = new List<ProdBase>();
         
         //ADICIONADO PARA LA BASE DE DATOS

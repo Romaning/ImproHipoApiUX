@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Domain.Entities.Common;
 
 namespace Domain.Entities.Auxiliar;
@@ -21,6 +22,6 @@ public partial class DefaultDomain : DefaultDomainBase
     //public int Estado { get; set; }
 
     //public int Grafico { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<DefaultAttrib> DefaultAttribs { get; set; } = new List<DefaultAttrib>();
 }

@@ -8,7 +8,7 @@ namespace Application.Models.Responses.ListaRapidaWebPageMain
         public string? Descripcion { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<TypeProdViewModel> TypeProds { get; set; } = new List<TypeProdViewModel>();
     }
 }

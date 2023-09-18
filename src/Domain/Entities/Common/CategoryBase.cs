@@ -22,7 +22,7 @@ public /*partial*/ class CategoryBase
     public int? Util { get; set; }
 
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
 
     public virtual ICollection<ProdBase> ProdBases { get; set; } = new List<ProdBase>();
 }

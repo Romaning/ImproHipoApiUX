@@ -16,7 +16,7 @@ namespace Domain.Entities.Common
 
         public int Estado { get; set; }
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<ProdBase> ProdBases { get; set; } = new List<ProdBase>();
     }
 }

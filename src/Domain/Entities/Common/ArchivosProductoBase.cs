@@ -30,9 +30,9 @@ public  class ArchivosProductoBase
     public DateTime? FecModifImgVol { get; set; }
 
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ProdBase ProdBase { get; set; } = null!;
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual TipoArchivoProductoBase TipoArchivoProductoBase { get; set; } = null!;
 }

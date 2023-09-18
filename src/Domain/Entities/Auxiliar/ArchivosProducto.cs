@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Domain.Entities.Common;
 
 namespace Domain.Entities.Auxiliar;
@@ -27,8 +28,8 @@ public partial class ArchivosProducto : ArchivosProductoBase
     //public DateTime? FecModifImg { get; set; }
 
     //public DateTime? FecModifImgVol { get; set; }
-
+    [JsonIgnore]
     public virtual Prod Prod { get; set; } = null!;
-
+    [JsonIgnore]
     public virtual TipoArchivoProducto TipoArchivoProducto { get; set; } = null!;
 }

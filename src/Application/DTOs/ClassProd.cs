@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Application.DTOs;
 
@@ -20,7 +21,7 @@ public partial class ClassProd : ClassProdBase
     //public int? Valor { get; set; }
 
     //public int? Util { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<TypeProd> TypeProds { get; set; } = new List<TypeProd>();
 
     //ADICIONADO PARA LA BASE DE DATOS

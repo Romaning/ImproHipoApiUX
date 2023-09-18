@@ -22,7 +22,7 @@ public /*partial*/ class MarkBase
     public int? Util { get; set; }
 
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ICollection<ProdBase> ProdBases { get; set; } = new List<ProdBase>();
 
     //public virtual ICollection<ProveedorFabrica> ProveedorFabricas { get; set; } = new List<ProveedorFabrica>();

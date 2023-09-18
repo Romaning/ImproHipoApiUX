@@ -13,6 +13,6 @@ public class TipoArchivoProductoBase
 
     public string? Descripcion { get; set; }
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ICollection<ArchivosProductoBase> ArchivosProductosBases { get; set; } = new List<ArchivosProductoBase>();
 }

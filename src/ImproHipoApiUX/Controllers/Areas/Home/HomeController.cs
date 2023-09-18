@@ -1,83 +1,30 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ImproHipoApiUX.Filters;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ImproHipoApiUX.Controllers.Areas.WebPage;
 
 namespace ImproHipoApiUX.Controllers.Areas.Home
 {
+    [EnableCors("_myAllowSpecificOrigins")]
+    [ApiController]
+    [Route("")]
+    [TypeFilter(typeof(ExceptionManagerFilter))]
     public class HomeController : Controller
     {
         // GET: HomeController
-        public ActionResult Index()
+        [HttpGet("")]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return RedirectToAction(actionName: "Other"/*, controllerName: "MainController"*/);
+            //eturn Ok("hola mundo");
         }
 
-        // GET: HomeController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet("other")]
+        public async Task<IActionResult> Other()
         {
-            return View();
-        }
-
-        // GET: HomeController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: HomeController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HomeController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HomeController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return Ok("hola mundo desde otro");
+            //eturn Ok("hola mundo");
         }
     }
 }

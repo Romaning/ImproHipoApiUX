@@ -20,7 +20,7 @@ namespace Domain.Entities.Common
         public int? Util { get; set; }
 
         [NotMapped]
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual ICollection<TypeProdBase> TypeProdBases { get; set; } = new List<TypeProdBase>();
         //ADICIONADO PARA LA BASE DE DATOS
         //public char? Database { get; set; } = char.MinValue;

@@ -482,15 +482,19 @@ namespace Infrastructure.Interactors
         public async Task<IEnumerable<ArchivosImagenViewModel>>? RenderArchivosImagenes(IEnumerable<CaracteristicasFilterModelDTO> carateristicas, string? descripcionProdBy, string descripcionClassBy, string descripcionTypeBy)
         {
             return (from img in carateristicas
-                                .SelectMany(xCaract => xCaract?.ArchivosProductoBases ?? new List<ArchivosProductoBase>()).Select(archivo => new ArchivosImagenViewModel
+                                .SelectMany(xCaract => xCaract?.ArchivosProductoBases ?? new List<ArchivosProductoBase>())
+                                .Where(ahora => ahora.Foto != null && ahora.Foto != "No exists" && ahora.Foto != "" && ahora.FotoTecnica != null && ahora.FotoVolumen != null)
+                                .Select(archivo => new ArchivosImagenViewModel
                                 {
                                     Nombre = archivo.Nombre ?? "No exists",
                                     Descipcion = archivo.Descipcion ?? "No exists",
                                     Foto = archivo.Foto ?? "No exists",
                                     FotoTecnica = archivo.FotoTecnica ?? "No exists",
                                     FotoVolumen = archivo.FotoVolumen ?? "No exists"
-                                }).ToList()
-                                .Where(ahora => ahora.Foto != null || ahora.FotoTecnica != null || ahora.FotoVolumen != null)
+                                })
+                                //.Where(x => x.Foto !=null && x.Foto != "" && x.Foto != "No exists")
+                                .ToList()
+                                
                     group new { Descripcion = img.Descipcion, Nombre = img.Nombre } by new { img.Foto, img.FotoTecnica, img.FotoVolumen } into agrupacion
                     select new ArchivosImagenViewModel
                     {

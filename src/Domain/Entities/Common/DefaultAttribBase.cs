@@ -25,9 +25,9 @@ public class DefaultAttribBase
 
     public int DefaultDomain { get; set; }
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual DefaultDomainBase DefaultDomainNavigationBase { get; set; } = null!;
     [NotMapped]
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ICollection<DefaultValueBase> DefaultValueBases { get; set; } = new List<DefaultValueBase>();
 }
